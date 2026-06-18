@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure SWA Test Deployment!</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+            color: #102a43;
+        }
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 { color: #0078d4; margin-top: 0; }
+        button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover { background-color: #005a9e; }
+        #timestamp { margin-top: 1rem; font-size: 0.85rem; color: #627d98; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Deployment Success!!!!!</h1>
+        <p>If you can see this page, your GitHub Actions workflow successfully pushed your code to Azure Static Web Apps.</p>
+        <button id="testBtn">Click Me</button>
+        <div id="timestamp"></div>
+    </div>
+
+    <script>
+        document.getElementById('testBtn').addEventListener('click', () => {
+            const now = new Date();
+            document.getElementById('timestamp').innerText = `Interactive JS works! Clicked at: ${now.toLocaleTimeString()}`;
+        });
+    </script>
+</body>
+</html>
